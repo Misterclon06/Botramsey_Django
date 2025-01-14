@@ -1,0 +1,110 @@
+/* Estilos generales */
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #1C1C1C; /* Fondo principal */
+    color: #E0E0E0; /* Texto principal */
+    font-family: sans-serif;
+}
+
+/* Contenedor principal del chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5%;
+    background-color: #262626; /* Contenedor de chat */
+    border-radius: 10px;
+}
+
+/* Encabezado del chat */
+.chat-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de mensajes */
+.chat-messages {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #1C1C1C; /* Fondo principal */
+    border: 1px solid #7B8D8E; /* Bordes y detalles */
+    border-radius: 10px;
+    max-height: 70vh; /* Altura máxima para el área de mensajes */
+}
+
+/* Animaciones para los mensajes */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mensajes del usuario y chatbot */
+.message-block-user, .message-block-bot {
+    display: flex;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    animation: slide-in 0.3s ease-out; /* Aparecen con un efecto de deslizamiento */
+}
+
+.message-block-user {
+    background-color: #4A90E2; /* Azul vibrante */
+    align-self: flex-end; /* Se alinean a la derecha */
+    border-bottom-right-radius: 0;
+    color: #1C1C1C; /* Texto oscuro para contraste */
+}
+
+.message-block-bot {
+    background-color: #50E3C2; /* Verde azulado */
+    align-self: flex-start; /* Se alinean a la izquierda */
+    border-bottom-left-radius: 0;
+    color: #1C1C1C; /* Texto oscuro para contraste */
+}
+
+/* Campo de entrada del chat */
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    padding: 10px;
+    background-color: #262626; /* Fondo del área de entrada */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #7B8D8E; /* Bordes y detalles */
+    border-radius: 20px;
+    background-color: #1C1C1C; /* Fondo del campo de entrada */
+    color: #E0E0E0; /* Texto del campo */
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4A90E2; /* Azul vibrante */
+    color: #1C1C1C; /* Texto oscuro */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+    background-color: #3A7CCD; /* Color al pasar el ratón */
+}

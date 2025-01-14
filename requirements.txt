@@ -1,0 +1,14 @@
+django
+django-cors-headers
+djangorestframework
+beautifulsoup4
+requests
+pandas
+selenium
+scikit-learn
+plotly
+spacy
+pygame
+gtts
+seaborn
+matplotlib
